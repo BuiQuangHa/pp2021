@@ -11,5 +11,3 @@ Student Info
 
 * Student Name: MY BEAUTY (is) FULL 
 * Student ID: ID123
-
-# testraudua
