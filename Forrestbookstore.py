@@ -1,6 +1,6 @@
 # modules imported
 
-from tkinter import *
+from tkinter import * Tk
 import tkinter.messagebox
 import sqlite3
 
@@ -9,16 +9,16 @@ import sqlite3
 class Books
     def _init_ (self,root):
        
-        #create object reference of Database class as b
+        # Create object reference of Database class as b
         d = Database()
         b.conn
-        #Database methods to perform database operation
+        # Database methods to perform database operation
         self.root = root
         self.root.title("FORREST BOOKSTORE MANAGEMENT SYSTEM")
         self.root.geometry("1325x690")
         self.root.config(bg="black")
 
-        #declare
+        # Declare
         
         BookID = StringVar()
         BookName = StringVar()
@@ -120,7 +120,7 @@ class Books
         def search():
             print("Books : search method called")
             BookList.delete(0,END)
-            for row in b.search(BookID.get(),BookName.get(),Price.get(),Author.get(),Year.get(),Publisher.get().Quantity.get())
+            for row in b.search(BookID.get(),BookName.get(),Price.get(),Author.get(),Year.get(),Publisher.get().Quantity.get()):
                 BookList.insert(END,row,str(""))
             print("Books : search method finished\n")
         
@@ -308,7 +308,7 @@ class Database:
         con.close()
         print(BookID,"Database : Delete method finished\n")
     
-    def search(self,BookID="",BookName="",Price="", Author="", Year="", Publisher="", Quantity="")
+    def search(self,BookID="",BookName="",Price="", Author="", Year="", Publisher="", Quantity=""):
         print("Database : search method called", BookID)
         con =sqlite3.connect("inventory.db")
         cur =con.cursor()
@@ -318,7 +318,7 @@ class Database:
         print(BookID,"Database : search method finished\n")
         return row 
         
-    def update(self,BookID="",BookName="",Price="", Author="", Year="", Publisher="", Quantity="")
+    def update(self,BookID="",BookName="",Price="", Author="", Year="", Publisher="", Quantity=""):
         print("Database : update method called", BookID)
         con =sqlite3.connect("inventory.db")
         cur =con.cursor()
