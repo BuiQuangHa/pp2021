@@ -15,11 +15,10 @@ class Books:
         b = Database()
         b.conn()
         # Database methods to perform database operation
-        self.root = tk.Tk()
+        self.root = root
         self.root.title("FORREST BOOKSTORE MANAGEMENT SYSTEM")
         self.root.geometry("1325x690")
-
-        self.root.mainloop()
+        self.root.config(bg="yellow")
 
         # Declare
 
