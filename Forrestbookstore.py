@@ -35,8 +35,7 @@ class Books:
 
         def close():
             print("Books : close methods called")
-            close = tkinter.messagebox.askyesno("FORREST BOOKSTORE MANAGEMENT SYSTEM",
-                                                "Yo man, are you sure about that?")
+            close = tkinter.messagebox.askyesno("FORREST BOOKSTORE MANAGEMENT SYSTEM","Yo man, are you sure about that?")
             if close > 0:
                 self.root.destroy()
                 print("Books : close methods finished\n")
@@ -344,9 +343,12 @@ class Database:
         con.commit()
         con.close()
         print(BookID, "Database : update method finished\n")
-if __name__ == '__main__':
 
+if __name__ == '__main__':
+    root = Tk()
     application = Books()
+    root.mainloop()
+
 
 
 
